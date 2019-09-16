@@ -1,4 +1,4 @@
-package ifrs.com.br.menu.view;
+package ifrs.com.br.view.menu;
 
 public class MenuOptionsLabels {
 	public static String getLabels() {

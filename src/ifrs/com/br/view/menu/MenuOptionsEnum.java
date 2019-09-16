@@ -1,4 +1,4 @@
-package ifrs.com.br.menu.view;
+package ifrs.com.br.view.menu;
 
 import java.util.HashMap;
 import java.util.Map;

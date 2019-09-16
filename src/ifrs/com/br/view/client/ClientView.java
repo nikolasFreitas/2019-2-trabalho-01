@@ -1,14 +1,11 @@
-package ifrs.com.br.client.view;
+package ifrs.com.br.view.client;
 
 import javax.swing.JOptionPane;
 
-import ifrs.com.br.client.model.*;
-//	String nome;
-//	String cpf;
-//	Integer contador;
+import ifrs.com.br.model.client.*;
 
 public class ClientView {
-	public static Client getClient() throws IllegalArgumentException {
+	public static Cliente getClient() throws IllegalArgumentException {
 		String nome = JOptionPane.showInputDialog("Nome do cliente");
 		if (nome.isEmpty() || nome == null) {
 			throw new IllegalArgumentException("Nome precisa ser digitado");
@@ -19,6 +16,6 @@ public class ClientView {
 			throw new IllegalArgumentException("cpf não pode ser nulo");
 		}
 
-		return new Client(nome, cpf);
+		return new Cliente(nome, cpf);
 	}
 }

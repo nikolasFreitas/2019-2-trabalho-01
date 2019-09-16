@@ -2,13 +2,14 @@ package ifrs.com.br.view;
 
 import java.util.*;
 import javax.swing.*;
-import ifrs.com.br.client.model.Client;
-import ifrs.com.br.client.view.ClientView;
-import ifrs.com.br.menu.view.*;
+
+import ifrs.com.br.model.client.Cliente;
+import ifrs.com.br.view.client.ClientView;
+import ifrs.com.br.view.menu.*;
 
 public class Principal {
 	public static void main(String[] args) {
-		Map<String, Client> clientList = new HashMap<>();
+		Map<String, Cliente> clientList = new HashMap<>();
 		while (true) {
 			String option = JOptionPane.showInputDialog(MenuOptionsLabels.getLabels());
 
@@ -18,7 +19,7 @@ public class Principal {
 				switch (optionMenu) {
 				case CREATE_CLIENT:
 					try {
-						Client client = ClientView.getClient();
+						Cliente client = ClientView.getClient();
 						clientList.put(client.getCpf(), client);
 						JOptionPane.showMessageDialog(null, "Cliente \"" + client.getNome() + "\" adcionado!");
 					} catch (IllegalArgumentException e) {
