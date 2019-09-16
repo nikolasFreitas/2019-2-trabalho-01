@@ -5,7 +5,7 @@ import javax.swing.JOptionPane;
 import ifrs.com.br.model.client.*;
 import ifrs.com.br.model.conta.*;
 import ifrs.com.br.util.exception.TestEmptyInput;
-import ifrs.com.br.view.conta.ContaView;
+import ifrs.com.br.view.conta.AddContaView;
 
 public class ClientView {
 	public static Cliente getClient() throws IllegalArgumentException {
@@ -17,7 +17,7 @@ public class ClientView {
 
 		JOptionPane.showMessageDialog(null, "Agora adicionaremos uma conta");
 
-		Conta conta = ContaView.getConta();
+		Conta conta = AddContaView.getConta();
 
 		return new Cliente(nome, cpf, conta);
 	}

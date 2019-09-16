@@ -30,7 +30,7 @@ public class Principal {
 
 				case GET_CLIENT_BY_CPF:
 					try {
-						String cpf = JOptionPane.showInputDialog("Digite o CPF do abençoado");
+						String cpf = JOptionPane.showInputDialog("Digite o CPF do cliente");
 						TestEmptyInput.testInput(cpf, "Cpf inválido");
 						Cliente cliente = clientList.get(cpf);
 						if (cliente != null) {

@@ -3,7 +3,7 @@ package ifrs.com.br.view.menu.cliente;
 import java.util.*;
 
 public enum ClientMenuOptions {
-	LIST_ACCOUNTS(1), ADD_ACCOUNT(2);
+	ADD_ACCOUNT(1);
 
 	private final int option;
 	private static Map<Integer, ClientMenuOptions> map = new HashMap<>();
@@ -18,7 +18,7 @@ public enum ClientMenuOptions {
 		this.option = option;
 	}
 
-	public ClientMenuOptions valueOf(int option) {
+	public static ClientMenuOptions valueOf(int option) {
 		return (ClientMenuOptions) map.get(option);
 	}
 

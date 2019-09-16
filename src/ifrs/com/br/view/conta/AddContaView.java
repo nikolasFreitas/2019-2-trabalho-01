@@ -8,7 +8,7 @@ import ifrs.com.br.model.contaCorrente.ContaCorrente;
 import ifrs.com.br.model.contaEspecial.ContaEspecial;
 import ifrs.com.br.util.exception.TestEmptyInput;
 
-public class ContaView {
+public class AddContaView {
 	public static Conta getConta() throws IllegalArgumentException {
 		Conta conta;
 
