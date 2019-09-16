@@ -12,9 +12,9 @@ public class Principal {
 		Map<String, Cliente> clientList = new HashMap<>();
 		while (true) {
 			String option = JOptionPane.showInputDialog(MenuOptionsLabels.getLabels());
+			MenuOptionsEnum optionMenu = MenuOptionsEnum.valueOf(Integer.parseInt(option));
 
-			if (option != null) {
-				MenuOptionsEnum optionMenu = MenuOptionsEnum.valueOf(Integer.parseInt(option));
+			if (optionMenu != null) {
 
 				switch (optionMenu) {
 				case CREATE_CLIENT:
