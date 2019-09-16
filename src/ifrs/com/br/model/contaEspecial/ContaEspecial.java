@@ -2,12 +2,13 @@ package ifrs.com.br.model.contaEspecial;
 
 import ifrs.com.br.model.conta.AccountType;
 import ifrs.com.br.model.conta.Conta;
+import ifrs.com.br.model.conta.SituacaoConta;
 
 public class ContaEspecial extends Conta {
 	private double limite;
 
 	public ContaEspecial(double saldo, int numero, String agencia, double limite) {
-		super(saldo, numero, agencia, AccountType.CONTA_ESPECIAL);
+		super(saldo, numero, agencia, AccountType.CONTA_ESPECIAL, SituacaoConta.ABERTA);
 		this.limite = limite;
 	}
 

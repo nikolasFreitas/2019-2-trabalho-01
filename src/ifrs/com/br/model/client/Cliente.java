@@ -10,17 +10,6 @@ public class Cliente {
 	private static Integer contador = 0;
 	private List<Conta> contas = new ArrayList<Conta>();
 
-	public Cliente() {
-		super();
-	}
-
-	public Cliente(String nome, String cpf) {
-		super();
-		this.nome = nome;
-		this.cpf = cpf;
-		contador++;
-	}
-
 	public Cliente(String nome, String cpf, Conta conta) {
 		super();
 		this.nome = nome;

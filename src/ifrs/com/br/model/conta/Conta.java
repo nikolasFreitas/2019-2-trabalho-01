@@ -5,13 +5,15 @@ public abstract class Conta implements OperacoesConta {
 	private int numero;
 	private String agencia;
 	private AccountType accountType;
+	private SituacaoConta situacaoConta;
 
-	public Conta(double saldo, int numero, String agencia, AccountType accountType) {
+	public Conta(double saldo, int numero, String agencia, AccountType accountType, SituacaoConta situacaoConta) {
 		super();
 		this.saldo = saldo;
 		this.numero = numero;
 		this.agencia = agencia;
 		this.accountType = accountType;
+		this.situacaoConta = situacaoConta;
 	}
 
 	@Override
