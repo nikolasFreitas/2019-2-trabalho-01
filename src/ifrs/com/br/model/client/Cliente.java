@@ -45,6 +45,14 @@ public class Cliente {
 		this.cpf = cpf;
 	}
 
+	public List<Conta> getContas() {
+		return contas;
+	}
+
+	public void addConta(Conta conta) {
+		this.contas.add(conta);
+	}
+
 	@Override
 	public String toString() {
 		return "Client nome=" + nome + ", cpf=" + cpf;

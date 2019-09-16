@@ -1,11 +1,12 @@
 package ifrs.com.br.model.contaCorrente;
 
+import ifrs.com.br.model.conta.AccountType;
 import ifrs.com.br.model.conta.Conta;
 
 public class ContaCorrente extends Conta{
 
 	public ContaCorrente(double saldo, int numero, String agencia) {
-		super(saldo, numero, agencia);
+		super(saldo, numero, agencia, AccountType.CONTA_CORRENTE);
 		// TODO Auto-generated constructor stub
 	}
 
