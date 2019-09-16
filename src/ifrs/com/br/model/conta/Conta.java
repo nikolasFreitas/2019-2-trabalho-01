@@ -54,4 +54,12 @@ public abstract class Conta implements OperacoesConta {
 		this.accountType = accountType;
 	}
 
+	public SituacaoConta getSituacaoConta() {
+		return situacaoConta;
+	}
+
+	public void setSituacaoConta(SituacaoConta situacaoConta) {
+		this.situacaoConta = situacaoConta;
+	}
+
 }

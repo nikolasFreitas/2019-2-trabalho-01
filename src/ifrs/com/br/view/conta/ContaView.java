@@ -6,39 +6,31 @@ import ifrs.com.br.model.conta.AccountType;
 import ifrs.com.br.model.conta.Conta;
 import ifrs.com.br.model.contaCorrente.ContaCorrente;
 import ifrs.com.br.model.contaEspecial.ContaEspecial;
+import ifrs.com.br.util.exception.TestEmptyInput;
 
 public class ContaView {
 	public static Conta getConta() throws IllegalArgumentException {
 		Conta conta;
-		String accountBalanceInput = JOptionPane.showInputDialog("Adicione o saldo inicial");
-		if (accountBalanceInput.isEmpty() || accountBalanceInput == null) {
-			throw new IllegalArgumentException("Saldo não pode ser nulo");
-		}
-		double accountBalance = Double.parseDouble(accountBalanceInput);
 
 		String accountNumberInput = JOptionPane.showInputDialog("Número da conta inicial");
-		if (accountNumberInput.isEmpty() || accountNumberInput == null) {
-			throw new IllegalArgumentException("Saldo não pode ser nulo");
-		}
-		int accountNumber = Integer.parseInt(accountBalanceInput);
+		TestEmptyInput.testInput(accountNumberInput, "Número da conta pode ser nulo");
+		int accountNumber = Integer.parseInt(accountNumberInput);
 
-		String accountAgency = JOptionPane.showInputDialog("Qual agência inicial");
-		if (accountAgency.isEmpty() || accountAgency == null) {
-			throw new IllegalArgumentException("Saldo não pode ser nulo");
-		}
+		String accountAgency = JOptionPane.showInputDialog("Qual agência inicial?");
+		TestEmptyInput.testInput(accountAgency, "Agência não pode ser nula");
+
+		String accountBalanceInput = JOptionPane.showInputDialog("Adicione o saldo inicial");
+		TestEmptyInput.testInput(accountBalanceInput, "Saldo não pode ser nulo");
+		double accountBalance = Double.parseDouble(accountBalanceInput);
 
 		String accountTypeInput = JOptionPane
 				.showInputDialog("Tipo de conta \n 1 - conta  corrente \n 2 - conta especial");
-		if (accountTypeInput.isEmpty() || accountTypeInput == null) {
-			throw new IllegalArgumentException("Cliente precisa ter um tipo de conta");
-		}
+		TestEmptyInput.testInput(accountTypeInput, "Cliente precisa ter um tipo de conta válido");
 		AccountType accountType = AccountType.valueOf(Integer.parseInt(accountTypeInput));
 
 		if (accountType == AccountType.CONTA_ESPECIAL) {
 			String specialAccountLimitInput = JOptionPane.showInputDialog("Qual é o valor do limite de crédito?");
-			if (specialAccountLimitInput.isEmpty() || specialAccountLimitInput == null) {
-				throw new IllegalArgumentException("Contas especiais precisam ter algum limite");
-			}
+			TestEmptyInput.testInput(specialAccountLimitInput, "Contas especiais precisam ter algum limite");
 
 			double specialAccountLimit = Double.parseDouble(specialAccountLimitInput);
 			conta = new ContaEspecial(accountBalance, accountNumber, accountAgency, specialAccountLimit);

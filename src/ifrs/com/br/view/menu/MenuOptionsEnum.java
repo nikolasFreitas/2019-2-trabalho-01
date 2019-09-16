@@ -3,8 +3,6 @@ package ifrs.com.br.view.menu;
 import java.util.HashMap;
 import java.util.Map;
 
-//Tradução do Enum retirado de: https://codingexplained.com/coding/java/enum-to-integer-and-integer-to-enum
-
 public enum MenuOptionsEnum {
 	CREATE_CLIENT(1), LIST_CLIENT_AND_ACCOUNTS(2), DEPOSIT(3), WITHDRAW(4), LIST_OPENNED_ACCOUNTS(5),
 	LIST_CLOSED_ACCOUNTS(6), LIST_NOT_USED_ACCOUNTS(7), EXIT(8);
