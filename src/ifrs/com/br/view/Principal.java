@@ -42,6 +42,7 @@ public class Principal {
 						System.out.println(e.getMessage());
 					}
 					break;
+
 				case LIST_CLIENTS:
 					StringBuffer clientInformation = new StringBuffer("Lista de clientes \n\n");
 					if (!clientList.values().isEmpty()) {

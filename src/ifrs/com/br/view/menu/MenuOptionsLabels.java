@@ -26,7 +26,10 @@ public class MenuOptionsLabels {
 		}
 		
 		String options = ("\n\n1 - Adicionar conta\n"
-				+ "2 - Voltar");
+				+ "2 - Abrir conta \n"
+				+ "3 - fechar conta \n"
+				+ "4 - Registrar conta inalterada \n"
+				+ "5 - Voltar");
 		
 		return (clientName + clientCpf + contas.toString() + options);
 	}	
