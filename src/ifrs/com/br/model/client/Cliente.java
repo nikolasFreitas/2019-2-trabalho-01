@@ -44,7 +44,8 @@ public class Cliente {
 
 	@Override
 	public String toString() {
-		return "Client nome=" + nome + ", cpf=" + cpf;
+		return "Nome: " + nome 
+				+ "\n cpf: " + cpf;
 	}
 
 }

@@ -42,6 +42,18 @@ public class Principal {
 						System.out.println(e.getMessage());
 					}
 					break;
+				case LIST_CLIENTS:
+					StringBuffer clientInformation = new StringBuffer("Lista de clientes \n\n");
+					if (!clientList.values().isEmpty()) {
+						for (Cliente client : clientList.values()) {
+							clientInformation.append(client.toString());
+							clientInformation.append("\n-------- \n\n");
+						}
+						JOptionPane.showMessageDialog(null, clientInformation.toString());
+					} else {
+						JOptionPane.showMessageDialog(null, "Ainda não existem clientes cadastrados");
+					}
+					break;
 
 				case EXIT:
 					System.exit(0);

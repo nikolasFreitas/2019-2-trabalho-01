@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public enum MainMenuOptionsEnum {
-	CREATE_CLIENT(1), GET_CLIENT_BY_CPF(2), LIST_CLIENT_AND_ACCOUNTS(3), LIST_OPENNED_ACCOUNTS(4),
+	CREATE_CLIENT(1), GET_CLIENT_BY_CPF(2), LIST_CLIENTS(3), LIST_OPENNED_ACCOUNTS(4),
 	LIST_CLOSED_ACCOUNTS(5), LIST_NOT_USED_ACCOUNTS(6), EXIT(7);
 
 	private int option;
