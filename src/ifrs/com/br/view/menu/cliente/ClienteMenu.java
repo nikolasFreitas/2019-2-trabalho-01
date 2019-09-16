@@ -16,6 +16,7 @@ public class ClienteMenu {
 			ClientMenuOptions optionMenu = ClientMenuOptions.valueOf(Integer.parseInt(option));
 
 			if (optionMenu != null) {
+
 				switch (optionMenu) {
 				case ADD_ACCOUNT:
 					try {
@@ -33,6 +34,7 @@ public class ClienteMenu {
 					} catch (IllegalArgumentException e) {
 						JOptionPane.showMessageDialog(null, e.getMessage());
 					}
+					break;
 
 				case OPEN_ACCOUNT:
 					try {

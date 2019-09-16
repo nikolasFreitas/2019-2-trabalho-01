@@ -29,7 +29,10 @@ public class ChangeAccountView {
 		if (conta != null) {
 			if (conta.getSituacaoConta() != SituacaoConta.ABERTA) {
 				int confirm = JOptionPane.showConfirmDialog(null, "Deseja abrir esta conta?");
-				System.out.println(confirm);
+				if (confirm == JOptionPane.YES_OPTION) {
+					conta.setSituacaoConta(SituacaoConta.ABERTA);
+					JOptionPane.showMessageDialog(null, "Conta alterada com sucesso");
+				}
 			} else {
 				JOptionPane.showMessageDialog(null, "Conta já se encontra aberta!");
 			}
@@ -51,7 +54,11 @@ public class ChangeAccountView {
 		if (conta != null) {
 			if (conta.getSituacaoConta() != SituacaoConta.FECHADA) {
 				int confirm = JOptionPane.showConfirmDialog(null, "Deseja encerrar esta conta?");
-				System.out.println(confirm);
+				if (confirm == JOptionPane.YES_OPTION) {
+					conta.setSituacaoConta(SituacaoConta.FECHADA);
+					JOptionPane.showMessageDialog(null, "Conta alterada com sucesso");
+				}
+
 			} else {
 				JOptionPane.showMessageDialog(null, "Conta já se encontra encerrada!");
 			}
@@ -70,11 +77,14 @@ public class ChangeAccountView {
 		}
 
 		if (conta != null) {
-			if (conta.getSituacaoConta() != SituacaoConta.FECHADA) {
+			if (conta.getSituacaoConta() != SituacaoConta.SEM_MOVIMENTACAO) {
 				int confirm = JOptionPane.showConfirmDialog(null, "Deseja abrir esta conta?");
-				System.out.println(confirm);
+				if (confirm == JOptionPane.YES_OPTION) {
+					conta.setSituacaoConta(SituacaoConta.SEM_MOVIMENTACAO);
+					JOptionPane.showMessageDialog(null, "Conta alterada com sucesso");
+				}
 			} else {
-				JOptionPane.showMessageDialog(null, "Conta já se encontra aberta!");
+				JOptionPane.showMessageDialog(null, "Conta não está ativa!");
 			}
 		} else {
 			JOptionPane.showMessageDialog(null, "Conta não encontrada");
