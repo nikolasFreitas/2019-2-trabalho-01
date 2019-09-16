@@ -3,7 +3,7 @@ package ifrs.com.br.client.model;
 public class Client {
 	String nome;
 	String cpf;
-	static Integer contador;
+	static Integer contador = 0;
 
 	public Client() {
 		super();
