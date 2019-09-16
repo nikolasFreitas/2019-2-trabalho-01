@@ -14,20 +14,24 @@ public class Principal {
 
 			if (option != null) {
 				MenuOptionsEnum optionMenu = MenuOptionsEnum.valueOf(Integer.parseInt(option));
+
 				switch (optionMenu) {
 				case CREATE_CLIENT:
 					try {
 						Client client = ClientView.getClient();
 						clientList.put(client.getCpf(), client);
-
+						JOptionPane.showMessageDialog(null, "Cliente \"" + client.getNome() + "\" adcionado!");
 					} catch (IllegalArgumentException e) {
 						JOptionPane.showMessageDialog(null, e.getMessage());
 					}
 					break;
+
 				case EXIT:
 					System.exit(0);
 					break;
+
 				default:
+					JOptionPane.showMessageDialog(null, "Opção inválida");
 					break;
 				}
 
