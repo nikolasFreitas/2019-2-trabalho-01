@@ -18,8 +18,11 @@ public abstract class Conta implements OperacoesConta {
 
 	@Override
 	public String toString() {
-		return "Conta [saldo=" + saldo + ", numero=" + numero + ", agencia=" + agencia + ", accountType=" + accountType
-				+ "]";
+		return ("Conta numero: " + numero 
+				+ "\n saldo: " + saldo
+				+ "\n agencia" + agencia 
+				+ "\n Tipo de conta=" + accountType
+				+ "\n----------\n");
 	}
 
 	public double getSaldo() {

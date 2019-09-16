@@ -25,7 +25,8 @@ public class MenuOptionsLabels {
 			contas.append(conta.toString() + "\n");
 		}
 		
-		String options = "\n\n 1 - Adicionar conta\n";
+		String options = ("\n\n1 - Adicionar conta\n"
+				+ "2 - Voltar");
 		
 		return (clientName + clientCpf + contas.toString() + options);
 	}	

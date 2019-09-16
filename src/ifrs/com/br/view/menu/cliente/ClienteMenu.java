@@ -22,6 +22,7 @@ public class ClienteMenu {
 					JOptionPane.showMessageDialog(null, e.getMessage());
 				}
 				break;
+			case MOVE_BACK:				
 			default:
 				break;
 			}
