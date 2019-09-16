@@ -16,13 +16,13 @@ public class ContaView {
 		}
 		double accountBalance = Double.parseDouble(accountBalanceInput);
 
-		String accountNumberInput = JOptionPane.showInputDialog("Adicione o saldo inicial");
+		String accountNumberInput = JOptionPane.showInputDialog("Número da conta inicial");
 		if (accountNumberInput.isEmpty() || accountNumberInput == null) {
 			throw new IllegalArgumentException("Saldo não pode ser nulo");
 		}
 		int accountNumber = Integer.parseInt(accountBalanceInput);
 
-		String accountAgency = JOptionPane.showInputDialog("Adicione o saldo inicial");
+		String accountAgency = JOptionPane.showInputDialog("Qual agência inicial");
 		if (accountAgency.isEmpty() || accountAgency == null) {
 			throw new IllegalArgumentException("Saldo não pode ser nulo");
 		}
