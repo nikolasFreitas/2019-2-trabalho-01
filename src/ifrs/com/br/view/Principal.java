@@ -20,7 +20,7 @@ public class Principal {
 				switch (optionMenu) {
 				case CREATE_CLIENT:
 					try {
-						Cliente client = ClientView.getClient();
+						Cliente client = ClientView.getClient(clientList);
 						clientList.put(client.getCpf(), client);
 						JOptionPane.showMessageDialog(null, "Cliente \"" + client.getNome() + "\" adcionado!");
 					} catch (IllegalArgumentException e) {

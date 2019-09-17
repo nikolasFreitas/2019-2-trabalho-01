@@ -10,9 +10,6 @@ public class MenuOptionsLabels {
 		return  ("1 – Cadastrar Cliente e sua(s) conta(s)\n"
 				+ "2 - Pesquisar cliente por CPF \n"
 				+ "3 – Listar todos os Clientes\n"
-	            + "4 – Listar todas as contas Abertas\n"
-	            + "5 – Listar todas as contas Fechadas\n"
-	            + "6 – Listar todas as contas Sem movimentação\n"
 	            + "7 – Sair");
 	}
 	
