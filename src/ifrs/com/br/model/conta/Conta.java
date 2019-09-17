@@ -20,8 +20,9 @@ public abstract class Conta implements OperacoesConta {
 	public String toString() {
 		return ("Conta numero: " + numero 
 				+ "\n saldo: " + saldo
-				+ "\n agencia" + agencia 
-				+ "\n Tipo de conta=" + accountType
+				+ "\n agencia: " + agencia 
+				+ "\n Tipo de conta: " + accountType
+				+ "\n Situação da conta: " + situacaoConta
 				+ "\n----------\n");
 	}
 

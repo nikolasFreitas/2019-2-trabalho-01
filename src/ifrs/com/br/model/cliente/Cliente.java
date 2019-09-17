@@ -1,4 +1,4 @@
-package ifrs.com.br.model.client;
+package ifrs.com.br.model.cliente;
 
 import java.util.*;
 

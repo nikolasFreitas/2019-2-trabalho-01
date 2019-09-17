@@ -3,7 +3,7 @@ package ifrs.com.br.view.menu.cliente;
 import java.util.*;
 
 public enum ClientMenuOptions {
-	ADD_ACCOUNT(1), OPEN_ACCOUNT(2), CLOSE_ACCOUNT(3), SET_ACCOUNT_NOT_USED(4), MOVE_BACK(5);
+	ADD_ACCOUNT(1), OPEN_ACCOUNT(2), CLOSE_ACCOUNT(3), SET_ACCOUNT_NOT_USED(4), CREDIT(5), DEBIT(6), MOVE_BACK(7);
 
 	private final int option;
 	private static Map<Integer, ClientMenuOptions> map = new HashMap<>();

@@ -2,7 +2,7 @@ package ifrs.com.br.view.client;
 
 import javax.swing.JOptionPane;
 
-import ifrs.com.br.model.client.*;
+import ifrs.com.br.model.cliente.*;
 import ifrs.com.br.model.conta.*;
 import ifrs.com.br.util.exception.TestEmptyInput;
 import ifrs.com.br.view.conta.AddContaView;

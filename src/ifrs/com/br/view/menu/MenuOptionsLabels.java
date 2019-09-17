@@ -2,7 +2,7 @@ package ifrs.com.br.view.menu;
 
 import java.util.Iterator;
 
-import ifrs.com.br.model.client.Cliente;
+import ifrs.com.br.model.cliente.Cliente;
 import ifrs.com.br.model.conta.Conta;
 
 public class MenuOptionsLabels {
@@ -29,7 +29,9 @@ public class MenuOptionsLabels {
 				+ "2 - Abrir conta \n"
 				+ "3 - fechar conta \n"
 				+ "4 - Registrar conta inalterada \n"
-				+ "5 - Voltar");
+				+ "5 - Adicionar dinheiro \n"
+				+ "6 - Sacar dinheiro \n"
+				+ "7 - Voltar");
 		
 		return (clientName + clientCpf + contas.toString() + options);
 	}	

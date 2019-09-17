@@ -2,7 +2,7 @@ package ifrs.com.br.view.menu.cliente;
 
 import javax.swing.JOptionPane;
 
-import ifrs.com.br.model.client.Cliente;
+import ifrs.com.br.model.cliente.Cliente;
 import ifrs.com.br.model.conta.Conta;
 import ifrs.com.br.view.conta.AddContaView;
 import ifrs.com.br.view.conta.ChangeAccountView;
@@ -40,6 +40,32 @@ public class ClienteMenu {
 					try {
 						ChangeAccountView accountView = new ChangeAccountView(cliente);
 						accountView.activateAccount();
+					} catch (IllegalArgumentException e) {
+						JOptionPane.showMessageDialog(null, e.getMessage());
+					}
+					break;
+				case SET_ACCOUNT_NOT_USED:
+					try {
+						ChangeAccountView accountView = new ChangeAccountView(cliente);
+						accountView.setNotUsedAccount();
+					} catch (IllegalArgumentException e) {
+						JOptionPane.showMessageDialog(null, e.getMessage());
+					}
+					break;
+
+				case CREDIT:
+					try {
+						ChangeAccountView accountView = new ChangeAccountView(cliente);
+						accountView.creditOption();
+					} catch (IllegalArgumentException e) {
+						JOptionPane.showMessageDialog(null, e.getMessage());
+					}
+					break;
+
+				case DEBIT:
+					try {
+						ChangeAccountView accountView = new ChangeAccountView(cliente);
+						accountView.debitOption();
 					} catch (IllegalArgumentException e) {
 						JOptionPane.showMessageDialog(null, e.getMessage());
 					}

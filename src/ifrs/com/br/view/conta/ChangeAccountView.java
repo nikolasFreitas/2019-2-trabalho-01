@@ -2,7 +2,7 @@ package ifrs.com.br.view.conta;
 
 import javax.swing.JOptionPane;
 
-import ifrs.com.br.model.client.Cliente;
+import ifrs.com.br.model.cliente.Cliente;
 import ifrs.com.br.model.conta.Conta;
 import ifrs.com.br.model.conta.SituacaoConta;
 import ifrs.com.br.util.exception.TestEmptyInput;
@@ -88,7 +88,46 @@ public class ChangeAccountView {
 			}
 		} else {
 			JOptionPane.showMessageDialog(null, "Conta não encontrada");
+		}
+	}
 
+	public void creditOption() {
+		Conta conta = null;
+
+		for (Conta contaToIterate : client.getContas()) {
+			if (contaToIterate.getNumero() == Integer.parseInt(contaInput)) {
+				conta = contaToIterate;
+			}
+		}
+
+		if (conta != null) {
+			String totalCredit = JOptionPane.showInputDialog("Digite a quantidade de crédito");
+			TestEmptyInput.testInput(totalCredit, "Quantidade precisa ser expecificada");
+
+			double credit = Double.parseDouble(totalCredit);
+			conta.credita(credit);
+		} else {
+			JOptionPane.showMessageDialog(null, "Conta não encontrada");
+		}
+	}
+
+	public void debitOption() {
+		Conta conta = null;
+
+		for (Conta contaToIterate : client.getContas()) {
+			if (contaToIterate.getNumero() == Integer.parseInt(contaInput)) {
+				conta = contaToIterate;
+			}
+		}
+
+		if (conta != null) {
+			String totalDebit = JOptionPane.showInputDialog("Digite a quantidade para pagamento");
+			TestEmptyInput.testInput(totalDebit, "Quantidade precisa ser expecificada");
+
+			double debit = Double.parseDouble(totalDebit);
+			conta.debita(debit);
+		} else {
+			JOptionPane.showMessageDialog(null, "Conta não encontrada");
 		}
 	}
 }

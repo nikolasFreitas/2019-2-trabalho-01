@@ -3,7 +3,7 @@ package ifrs.com.br.view;
 import java.util.*;
 import javax.swing.*;
 
-import ifrs.com.br.model.client.Cliente;
+import ifrs.com.br.model.cliente.Cliente;
 import ifrs.com.br.util.exception.TestEmptyInput;
 import ifrs.com.br.view.client.ClientView;
 import ifrs.com.br.view.menu.*;
